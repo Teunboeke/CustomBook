@@ -59,3 +59,12 @@ class Main extends PluginBase implements Listener
 		
 		
 				$book = ItemFactory::get(ItemIds::WRITTEN_BOOK);
+		
+		
+				for ($i=0; $i < count($getBook['pages']); $i++) { 
+				$text = TextFormat::colorize($getBook['pages'][$i]);
+					
+								$book->setPageText($i, $text);
+							}
+
+				if (array_key_exists('permission', $getBook)){
