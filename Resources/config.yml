@@ -1,1 +1,5 @@
-
+# Thank you for using CustomBook plugin. 
+#
+#
+# The books which is/are specified below will be given to the users on join.
+spawn-books: ['example', 'example2']
