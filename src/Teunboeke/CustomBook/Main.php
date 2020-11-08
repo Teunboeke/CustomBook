@@ -19,4 +19,13 @@ class Main extends PluginBase implements Listener
   
   
   
-  	public function onEnable() : void{
+  	public function onEnable() : void{  
+		$this->getServer()->getPluginManager()->registerEvents($this,$this);
+  
+  		@mkdir($this->getDataFolder());
+  
+  		$this->saveResource("lang.yml");
+  		$this->lang = new Config($this->getDataFolder() . "lang.yml", Config::YAML);
+ 
+  		$this->saveResource("books.yml");
+  		$this->books = new Config($this->getDataFolder() . "books.yml", Config::YAML);
