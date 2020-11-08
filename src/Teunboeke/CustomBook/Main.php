@@ -50,3 +50,12 @@ class Main extends PluginBase implements Listener
 						}
 					
 				if (!array_key_exists($arg, $this->books->get('books'))){
+						$sender->sendMessage(TextFormat::colorize($this->lang->get("book-not-found")));	
+						return true;
+							}
+
+				$getBook = $this->books->get('books')[$arg];
+		
+		
+		
+				$book = ItemFactory::get(ItemIds::WRITTEN_BOOK);
