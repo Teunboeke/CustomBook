@@ -49,3 +49,4 @@ class Main extends PluginBase implements Listener
 							return true;
 						}
 					
+				if (!array_key_exists($arg, $this->books->get('books'))){
