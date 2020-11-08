@@ -36,3 +36,16 @@ class Main extends PluginBase implements Listener
 		$this->lang->reload(); 
 		$this->books->reload();
 		$this->config->reload();
+
+		$this->getLogger()->info("CustomBooks plugin successfully loaded.");
+		}
+
+	public function giveBook($arg, $sender){
+		$this->books->reload();
+		$this->lang->reload();
+
+			if (!$arg){
+			$sender->sendMessage(TextFormat::colorize($this->lang->get("specify-book-name")));
+							return true;
+						}
+					
