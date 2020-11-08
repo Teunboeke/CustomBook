@@ -78,3 +78,13 @@ class Main extends PluginBase implements Listener
 				$sender->getInventory()->addItem($book);
 		
 			}
+
+	public function onJoin(PlayerJoinEvent $event){
+				$spawnBooks = $this->config->get('spawn-books');
+				$player = $event->getPlayer();
+		
+				if (!$spawnBooks)
+					return true;
+		
+		
+				foreach ($this->config->get('spawn-books') as $key) {
