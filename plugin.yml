@@ -9,7 +9,7 @@ commands:
         description: "Get the specified book."
         usage: "/book <book>"
    
-      books:
-           description: "Get a list of books."
-           usage: "/books"
+    books:
+         description: "Get a list of books."
+         usage: "/books"
              
