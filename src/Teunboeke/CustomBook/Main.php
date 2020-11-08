@@ -68,3 +68,13 @@ class Main extends PluginBase implements Listener
 							}
 
 				if (array_key_exists('permission', $getBook)){
+				if (!$sender->hasPermission($getBook['permission'])){
+						$sender->sendMessage(TextFormat::colorize($this->lang->get('no-permission')));
+									return true;
+								}
+							}
+
+				$book->setCustomName(TextFormat::colorize($getBook['name']));
+				$sender->getInventory()->addItem($book);
+		
+			}
