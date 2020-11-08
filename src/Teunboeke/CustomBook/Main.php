@@ -88,3 +88,34 @@ class Main extends PluginBase implements Listener
 		
 		
 				foreach ($this->config->get('spawn-books') as $key) {
+			if (array_key_exists($key, $this->books->get('books'))){
+								$this->giveBook($key, $player);
+							}
+						}
+			}
+
+	public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
+				$this->books->reload();
+				$this->lang->reload();
+		
+				switch($command->getName()){
+					case "book":
+						$this->giveBook($args[0], $sender);
+						return true;
+						
+								case "books":
+									$booklist = "";
+									foreach (array_keys($this->books->get('books')) as $book) {
+											$booklist .= $book . ", ";
+														}
+						
+							$sender->sendMessage(TextFormat::colorize($this->lang->get('books') . $booklist));
+						
+										return true;
+								}
+			}
+
+	public function onDisable() : void{
+				$this->getLogger()->info("CustomBooks plugin disabled.");
+			}
+}
