@@ -1,1 +1,11 @@
+# Thank you for using CustomBooks plugin. Read below to get more information.
 
+# You can change the messages in this file (lang.yml) to translate it to your
+# language.
+
+specify-book-name: "&4Please specify a book name!"
+book-not-found: "&4The book you specified is not found!"
+no-permission: "&4You don't have permission to get this book."
+
+# Books will be written to the end of the line. 
+books: "&2Available books: &b"
