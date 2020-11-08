@@ -2,4 +2,4 @@
 
 declare(strict_types=1);
 
-namespace Teunboeke/
+namespace Teunboeke/Custombook;
