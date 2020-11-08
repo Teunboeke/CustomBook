@@ -1,9 +1,9 @@
 name: CustomBook
-main: Teunboeke\CustomBook\Main
-version: 1.0.0
-api: [3.15.2]
-author: Teunboeke
+author: Teunboek
 description: create custombooks that players can read
+version: 1.0.0
+main: Teunboeke\CustomBook\Main
+api: [3.15.2]
 commands:
     book:
      description: "Get the specified book."
