@@ -6,11 +6,11 @@ main: Teunboeke\CustomBook\Main
 api: [3.15.2]
 
 commands:
-    book:
-     description: "Get the specified book."
-     usage: "/book <book>"
+     book:
+      description: "Get the specified book."
+      usage: "/book <book>"
    
-    books:
-     description: "Get a list of books."
-     usage: "/books"
+     books:
+      description: "Get a list of books."
+      usage: "/books"
              
