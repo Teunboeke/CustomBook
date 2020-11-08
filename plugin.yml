@@ -4,6 +4,7 @@ description: create custombooks that players can read
 version: 1.0.0
 main: Teunboeke\CustomBook\Main
 api: [3.15.2]
+
 commands:
     book:
      description: "Get the specified book."
