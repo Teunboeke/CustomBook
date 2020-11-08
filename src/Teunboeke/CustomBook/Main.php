@@ -17,8 +17,7 @@ use pocketmine\event\player\PlayerJoinEvent;
 
 class Main extends PluginBase implements Listener
   
-  
-  
+   
   	public function onEnable() : void{  
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
   
@@ -55,9 +54,7 @@ class Main extends PluginBase implements Listener
 							}
 
 				$getBook = $this->books->get('books')[$arg];
-		
-		
-		
+			
 				$book = ItemFactory::get(ItemIds::WRITTEN_BOOK);
 		
 		
@@ -85,8 +82,7 @@ class Main extends PluginBase implements Listener
 		
 				if (!$spawnBooks)
 					return true;
-		
-		
+				
 				foreach ($this->config->get('spawn-books') as $key) {
 			if (array_key_exists($key, $this->books->get('books'))){
 								$this->giveBook($key, $player);
@@ -103,11 +99,11 @@ class Main extends PluginBase implements Listener
 						$this->giveBook($args[0], $sender);
 						return true;
 						
-								case "books":
-									$booklist = "";
-									foreach (array_keys($this->books->get('books')) as $book) {
-											$booklist .= $book . ", ";
-														}
+					case "books":
+						$booklist = "";
+						foreach (array_keys($this->books->get('books')) as $book) {
+										$booklist .= $book . ", ";
+											}
 						
 							$sender->sendMessage(TextFormat::colorize($this->lang->get('books') . $booklist));
 						
