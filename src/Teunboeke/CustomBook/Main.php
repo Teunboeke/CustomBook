@@ -29,3 +29,10 @@ class Main extends PluginBase implements Listener
  
   		$this->saveResource("books.yml");
   		$this->books = new Config($this->getDataFolder() . "books.yml", Config::YAML);
+
+                $this->saveResource("config.yml");
+		$this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
+					   
+		$this->lang->reload(); 
+		$this->books->reload();
+		$this->config->reload();
