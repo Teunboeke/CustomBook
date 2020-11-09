@@ -86,6 +86,7 @@ class Main extends PluginBase implements Listener{
 				if (!$spawnBooks)
 					return true;
 				
+		
 				foreach ($this->config->get('spawn-books') as $key) {
 			if (array_key_exists($key, $this->books->get('books'))){
 								$this->giveBook($key, $player);
