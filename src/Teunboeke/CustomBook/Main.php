@@ -112,6 +112,6 @@ class Main extends PluginBase implements Listener{
 			}
 
 	public function onDisable() : void{
-				$this->getLogger()->info("CustomBooks plugin disabled.");
+         $this->getLogger()->info("CustomBooks plugin disabled.");
 			}
 }
