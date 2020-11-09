@@ -15,7 +15,7 @@ use pocketmine\utils\TextFormat;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
 
-class Main extends PluginBase implements Listener
+class Main extends PluginBase implements Listener{
   
    
   	public function onEnable() : void{  
