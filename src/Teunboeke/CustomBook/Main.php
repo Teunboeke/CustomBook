@@ -23,7 +23,6 @@ class Main extends PluginBase implements Listener{
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
   
   		@mkdir($this->getDataFolder());
-  
   		
 		$this->saveResource("lang.yml");
   		$this->lang = new Config($this->getDataFolder() . "lang.yml", Config::YAML);
