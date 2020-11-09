@@ -18,7 +18,8 @@ use pocketmine\event\player\PlayerJoinEvent;
 class Main extends PluginBase implements Listener{
   
    
-  	public function onEnable() : void{  
+  	
+	public function onEnable() : void{  
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
   
   		@mkdir($this->getDataFolder());
